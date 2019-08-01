@@ -1,0 +1,23 @@
+﻿
+@{
+    ViewBag.Title = "halaman_pertama";
+}
+
+<h2>halaman_pertama</h2>
+Nama saya adalah : @ViewBag.nama_saya <br />
+Umur saya : @ViewBag.umur_saya <br />
+Saya tinggal di @ViewBag.alamat
+
+@{ 
+    var minuman = "air putih";
+}
+
+saya minum @minuman
+
+@{ 
+    var angka_1 = 5;
+    var angka_2 = 10;
+    var hasil = angka_1 + angka_5;
+}
+
+hasil angka diatas adalah @{angka_1 + angka_2}

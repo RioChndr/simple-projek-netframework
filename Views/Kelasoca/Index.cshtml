@@ -1,0 +1,46 @@
+﻿
+@{
+    ViewBag.Title = "Data Kelas Oca";
+    Layout = "~/Views/Shared/_TemplateKu.cshtml";
+}
+
+<h2>DATA Kelas OCA</h2>
+<br />
+Materi hari ini adalah @Model.nama_materi
+<br />
+<table>
+    <tr>
+        <td>No</td>
+        <td>Nama</td>
+        <td>Alamat</td>
+        <td>Jenis Kelamin</td>
+        <td>status</td>
+        <td>Umur</td>
+    </tr>
+    @{ 
+        var nomor = 0;
+    }
+    @foreach(var anggota in Model.anggotaKelas)
+    {
+        <tr>
+            <td>@nomor</td>
+            <td>@anggota.nama</td>
+            <td>@anggota.alamat</td>
+            <td>@anggota.jenis_kelamin</td>
+            <td>@{
+                if (@anggota.sudah_punya_pacar)
+                {
+                    <p>Berhubungan</p>
+                }
+                else
+                {
+                    <p>Melajang</p>
+                }
+            }</td>
+            <td>@anggota.umur</td>
+        </tr>
+        nomor++;
+    }
+</table>
+
+

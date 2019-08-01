@@ -1,0 +1,31 @@
+﻿<!DOCTYPE html>
+
+<html>
+<head>
+    <meta name="viewport" content="width=device-width" />
+    <title>@ViewBag.Title</title>
+    <style>
+        .header{
+            width:100%;
+            padding:20px;
+        }
+        .footer{
+            width:100%;
+            background-color:red;
+            color:white;
+            padding:20px;
+        }
+    </style>
+</head>
+<body>
+    <div class="header">
+        Ini Header
+    </div>
+    <div>
+        @RenderBody()
+    </div>
+    <div class="footer">
+        Ini footer
+    </div>
+</body>
+</html>
